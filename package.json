@@ -48,7 +48,7 @@
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-medium-image-zoom": "5.1.8",
+    "react-medium-image-zoom": "5.2.8",
     "rss": "1.2.2",
     "server-only": "0.0.1",
     "string-similarity": "^4.0.4",
