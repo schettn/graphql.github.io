@@ -1,5 +1,5 @@
 import { Button } from "@/app/conf/_components/button"
-import { CheckIcon, ClockIcon } from "@/icons"
+import { CheckIcon } from "@/icons"
 import { clsx } from "clsx"
 
 interface Pricing {
@@ -33,7 +33,7 @@ const pricing: Pricing[] = [
 const includes: string[] = [
   "All conference content",
   "Full-day GraphQL workshop",
-  "Lunch and all-day beverages",
+  "All-Day Beverages and Morning and Afternoon Break",
   "Entry to Sponsor Showcase",
   "GraphQLConf event t-shirt",
   "Access to watch all sessions post-event",
@@ -88,12 +88,6 @@ export function Pricing() {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className={clsx(classes.container, "flex flex-col items-center")}>
-        <ClockIcon className="text-primary h-10 mb-10" />
-        <h3 className={classes.heading}>Speakers & Schedule</h3>
-        <p className="-mt-10 text-2xl">Coming soon</p>
       </div>
     </>
   )

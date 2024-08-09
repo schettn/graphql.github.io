@@ -2,6 +2,9 @@ import Stellate from "public/img/conf/Sponsors/Stellate.svg"
 import Hasura from "public/img/conf/Sponsors/Hasura.svg"
 import TheGuild from "public/img/conf/Sponsors/TheGuild.svg"
 import Apollo from "public/img/conf/Sponsors/Apollo.svg"
+import Tyk from "public/img/conf/Sponsors/Tyk.svg"
+import IBM from "public/img/conf/Sponsors/IBM.svg"
+import Graphweaver from "public/img/conf/Sponsors/Graphweaver.svg"
 
 import { clsx } from "clsx"
 import NextImage from "next-image-export-optimizer"
@@ -14,17 +17,20 @@ interface Image {
 
 const sponsorDiamond: Image[] = [
   { icon: TheGuild, name: "The Guild", link: "https://the-guild.dev" },
+  { icon: IBM, name: "IBM", link: "https://www.ibm.com/products/api-connect" },
 ]
 
 const sponsorPlatinum: Image[] = []
 
 const sponsorGold: Image[] = [
   { icon: Apollo, name: "Apollo", link: "https://www.apollographql.com/" },
+  { icon: Graphweaver, name: "Graphweaver", link: "https://graphweaver.com" },
   { icon: Hasura, name: "Hasura", link: "https://hasura.io" },
 ]
 
 const sponsorSilver: Image[] = [
   { icon: Stellate, name: "Stellate", link: "https://stellate.co" },
+  { icon: Tyk, name: "Tyk", link: "https://tyk.io/" },
 ]
 
 const workshopDaySponsors: Image[] = []
@@ -50,6 +56,7 @@ function List({
           className={clsx(
             "relative shrink-0 bg-[#251f30] rounded-md",
             "flex justify-center",
+            "items-center", // fix vertical align in Safari/iOS
             "border border-solid border-transparent hover:border-primary focus:border-primary",
             "transition-colors",
             "hover:shadow-primary/20 focus:shadow-primary/20 shadow-md outline-none",
@@ -63,7 +70,7 @@ function List({
           <NextImage
             alt={`${name} logo`}
             src={icon}
-            className="h-auto lg:max-w-60 shrink"
+            className="lg:w-auto lg:max-w-60 max-h-full"
           />
           <span className="font-sans absolute right-5 top-5 leading-none text-white lg:text-2xl">
             ↗
